@@ -33,6 +33,11 @@ public class onClick implements Listener {
                 recipient.setVelocity(recipient.getLocation().toVector().subtract(player.getLocation().toVector()).normalize());
                 player.getInventory().getItemInMainHand().setAmount(player.getInventory().getItemInMainHand().getAmount() - 1);
             }
+        } else if (modelData == 4001 && rightClickedWithHand) {
+            player.setVelocity(
+                    player.getLocation().getDirection().add(new Vector(0, 0.25, 0))
+            );
+            player.getInventory().getItemInMainHand().setAmount(player.getInventory().getItemInMainHand().getAmount() - 1);
         }
     }
 
