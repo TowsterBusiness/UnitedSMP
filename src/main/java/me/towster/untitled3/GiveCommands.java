@@ -36,6 +36,15 @@ public class GiveCommands implements CommandExecutor {
                 meta.setLore(lore);
                 is.setItemMeta(meta);
                 player.getInventory().addItem(is);
+            } else if (args[0].equals("wind")) {
+                ItemStack is = new ItemStack(Material.BLAZE_ROD);
+                ItemMeta meta = is.getItemMeta();
+                meta.setCustomModelData(4000);
+                meta.setDisplayName(ChatColor.RED + "" + ChatColor.BOLD + "Boom");
+                List<String> lore = new ArrayList<>();
+                meta.setLore(lore);
+                is.setItemMeta(meta);
+                player.getInventory().addItem(is);
             }
         return true;
     }

@@ -9,7 +9,7 @@ import org.bukkit.util.Vector;
 
 public class Untitled3 extends JavaPlugin {
 
-    private static UnitedSMP instance;
+    private static Untitled3 instance;
     @Override
     public void onEnable() {
         instance = this;
