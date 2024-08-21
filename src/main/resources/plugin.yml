@@ -1,0 +1,4 @@
+name: untitled3
+version: '${project.version}'
+main: me.towster.untitled3.Untitled3
+api-version: '1.21'
