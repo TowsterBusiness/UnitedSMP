@@ -38,6 +38,29 @@ public class Untitled3 extends JavaPlugin {
             }
 
         }, 0L, 1200L);
+
+        Bukkit.getServer().getScheduler().scheduleSyncRepeatingTask(this, new Runnable(){
+            public void run() {
+                if (me.towster.united_smp.AbilityStatics.domExpCheckForPlayerPos) {
+                    Vector boxMid = me.towster.united_smp.AbilityStatics.domExpV1.clone().midpoint(me.towster.united_smp.AbilityStatics.domExpV2);
+                    for (Player p : Bukkit.getOnlinePlayers()) {
+                        Vector pVec = p.getLocation().toVector();
+                        boolean isInBox = pVec.isInAABB(me.towster.united_smp.AbilityStatics.domExpV1, me.towster.united_smp.AbilityStatics.domExpV2) && p.getWorld().equals(me.towster.united_smp.AbilityStatics.domExpWorld);
+                        if (p.equals(me.towster.united_smp.AbilityStatics.domExpP1) || p.equals(me.towster.united_smp.AbilityStatics.domExpP2)) {
+                            if (!isInBox) {
+                                p.teleport(new Location(me.towster.united_smp.AbilityStatics.domExpWorld, boxMid.getX(), boxMid.getY(), boxMid.getZ()));
+                            }
+                        } else {
+                            if (isInBox) {
+                                p.teleport(new Location(me.towster.united_smp.AbilityStatics.domExpWorld, boxMid.getX(), 90, boxMid.getZ()));
+                            }
+                        }
+
+                    }
+                }
+            }
+
+        }, 0L, 1L);
     }
 
     @Override
