@@ -18,7 +18,9 @@ public class Untitled3 extends JavaPlugin {
         // Plugin startup logic
         this.getCommand("united-give").setExecutor(new GiveCommands());
         this.getServer().getPluginManager().registerEvents(new onAnvilUse(), this);
+        this.getServer().getPluginManager().registerEvents(new onClickEntity(), this);
         this.getServer().getPluginManager().registerEvents(new onClick(), this);
+        this.getServer().getPluginManager().registerEvents(new onBlockBreak(), this);
 
         Bukkit.getServer().getScheduler().scheduleSyncRepeatingTask(this, new Runnable(){
             public void run() {
