@@ -1,4 +1,6 @@
 package me.towster.untitled3.EventHandlers;
+import me.towster.untitled3.Untitled3;
+import me.towster.untitled3.utils.ParticleDrawer;
 import org.bukkit.*;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockState;
@@ -47,6 +49,25 @@ public class onClickEntity implements Listener {
                 Vector b2 = a1.distanceSquared(a2) < 100
                         ? new Vector(Math.max(a1.getBlockX(), a2.getBlockX()) + 5, Math.max(a1.getBlockY(), a2.getBlockY()) + 5, Math.max(a1.getBlockZ(), a2.getBlockZ()) + 5)
                         : new Vector(a2.getBlockX() + 5, a1.getBlockY() + 5, a1.getBlockZ() + 5);
+                for (Player recipient : Bukkit.getOnlinePlayers()) {
+                    if (recipient.equals(player)) continue;
+                    if (recipient.equals(rightClicked)) continue;
+                    if (player.getLocation().distanceSquared(recipient.getLocation()) >= 81) continue;
+                    recipient.setVelocity(recipient.getLocation().toVector().subtract(player.getLocation().toVector()).setY(0).normalize().multiply(1.5).add(new Vector(0, 1.5, 0)));
+                }
+
+                AbilityStatics.domExpV1 = b1;
+                AbilityStatics.domExpV2 = b2;
+                AbilityStatics.domExpP1 = player;
+                AbilityStatics.domExpP2 = rightClicked;
+                AbilityStatics.domExpWorld = world;
+
+                Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(Untitled3.getInstance(), () -> {
+                    AbilityStatics.domExpCheckForPlayerPos = true;
+                    player.addPotionEffect(new PotionEffect(PotionEffectType.DARKNESS, 99999, 1));
+                    rightClicked.addPotionEffect(new PotionEffect(PotionEffectType.DARKNESS, 99999, 1));
+                    ParticleDrawer.drawLine(world, Particle.FLAME, b1, b2, 0.1);
+                }, 1000);
             }
         }
     }
