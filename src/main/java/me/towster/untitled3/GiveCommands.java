@@ -63,6 +63,15 @@ public class GiveCommands implements CommandExecutor {
                 meta.setLore(lore);
                 is.setItemMeta(meta);
                 player.getInventory().addItem(is);
+            } else if (args[0].equals("domain-expansion")) {
+                ItemStack is = new ItemStack(Material.ECHO_SHARD);
+                ItemMeta meta = is.getItemMeta();
+                meta.setCustomModelData(3001);
+                meta.setDisplayName(ChatColor.DARK_BLUE + "" + ChatColor.BOLD + "Veititus’s Void");
+                List<String> lore = new ArrayList<>();
+                meta.setLore(lore);
+                is.setItemMeta(meta);
+                player.getInventory().addItem(is);
             }
         }
         return true;
