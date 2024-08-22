@@ -69,6 +69,12 @@ public class onClickEntity implements Listener {
                     ParticleDrawer.drawLine(world, Particle.FLAME, b1, b2, 0.1);
                 }, 1000);
 
+                BlockState[][][] blocks =
+                        new BlockState[b2.getBlockX() - b1.getBlockX() + 1]
+                                [b2.getBlockY() - b1.getBlockY() + 1]
+                                [b2.getBlockZ() - b1.getBlockZ() + 1];
+
+
                 for (int x = 0; x <= b2.getBlockX() - b1.getBlockX(); x++) {
                     for (int y = 0; y <= b2.getBlockY() - b1.getBlockY(); y++) {
                         for (int z = 0; z <= b2.getBlockZ() - b1.getBlockZ(); z++) {
@@ -83,6 +89,34 @@ public class onClickEntity implements Listener {
                         }
                     }
                 }
+
+                Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(Untitled3.getInstance(), () -> {
+                    player.removePotionEffect(PotionEffectType.DARKNESS);
+                    rightClicked.removePotionEffect(PotionEffectType.DARKNESS);
+                    int x = 0, y = 0, z = 0;
+                    for (BlockState[][] a : blocks) {
+                        for (BlockState[] b : a) {
+                            for (BlockState c : b) {
+                                if (c != null) {
+                                    c.update(true, true);
+                                } else {
+                                    world.getBlockAt(x + b1.getBlockX(), y + b1.getBlockY(), z + b1.getBlockZ()).setType(Material.AIR);
+                                }
+                                z++;
+                            }
+                            y++;
+                            z = 0;
+                        }
+                        x++;
+                        y = 0;
+                    }
+                }, 60L);
+
+                Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(Untitled3.getInstance(), () -> {
+                    player.sendMessage("usedDomainExpansion = false");
+                    AbilityStatics.usedDomainExpansion = false;
+                    AbilityStatics.domExpCheckForPlayerPos = false;
+                }, 60L);
             }
         }
     }
