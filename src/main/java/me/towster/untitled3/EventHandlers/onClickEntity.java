@@ -68,6 +68,21 @@ public class onClickEntity implements Listener {
                     rightClicked.addPotionEffect(new PotionEffect(PotionEffectType.DARKNESS, 99999, 1));
                     ParticleDrawer.drawLine(world, Particle.FLAME, b1, b2, 0.1);
                 }, 1000);
+
+                for (int x = 0; x <= b2.getBlockX() - b1.getBlockX(); x++) {
+                    for (int y = 0; y <= b2.getBlockY() - b1.getBlockY(); y++) {
+                        for (int z = 0; z <= b2.getBlockZ() - b1.getBlockZ(); z++) {
+
+                            blocks[x][y][z] = world.getBlockAt(new Location(world, x + b1.getBlockX(), y + b1.getBlockY(), z + b1.getBlockZ())).getState();
+
+                            if (x == 0 || y == 0 || z == 0 || x == b2.getBlockX() - b1.getBlockX() || y == b2.getBlockY() - b1.getBlockY() || z == b2.getBlockZ() - b1.getBlockZ()) {
+                                world.getBlockAt(x + b1.getBlockX(), y + b1.getBlockY(), z + b1.getBlockZ()).setType(Material.BLACK_CONCRETE);
+                            } else {
+                                world.getBlockAt(x + b1.getBlockX(), y + b1.getBlockY(), z + b1.getBlockZ()).setType(Material.AIR);
+                            }
+                        }
+                    }
+                }
             }
         }
     }
