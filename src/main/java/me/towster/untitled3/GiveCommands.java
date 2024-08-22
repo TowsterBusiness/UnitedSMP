@@ -54,6 +54,15 @@ public class GiveCommands implements CommandExecutor {
                 meta.setLore(lore);
                 is.setItemMeta(meta);
                 player.getInventory().addItem(is);
+            } else if (args[0].equals("asmi")) {
+                ItemStack is = new ItemStack(Material.GOLDEN_HOE);
+                ItemMeta meta = is.getItemMeta();
+                meta.setCustomModelData(3002);
+                meta.setDisplayName(ChatColor.GOLD + "" + ChatColor.BOLD + "Asmi");
+                List<String> lore = new ArrayList<>();
+                meta.setLore(lore);
+                is.setItemMeta(meta);
+                player.getInventory().addItem(is);
             }
         }
         return true;
