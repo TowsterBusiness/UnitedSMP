@@ -1,5 +1,6 @@
 package me.towster.untitled3.EventHandlers;
 
+import me.towster.untitled3.utils.ParticleDrawer;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -38,8 +39,14 @@ public class onClick implements Listener {
                     player.getLocation().getDirection().add(new Vector(0, 0.25, 0))
             );
             player.getInventory().getItemInMainHand().setAmount(player.getInventory().getItemInMainHand().getAmount() - 1);
+        } else if (modelData == 3002 && rightClickedWithHand) {
+            ParticleDrawer.drawLine(
+                    player.getWorld(),
+                    Particle.FLAME,
+                    player.getLocation().toVector().add(new Vector(0, 1.5,0)).add(player.getLocation().getDirection().multiply(0.5)),
+                    player.getLocation().toVector().add(new Vector(0, 1.5,0)).add(player.getLocation().getDirection().multiply(30)),
+                    1);
         }
     }
-
 //    public void itemHandler(
 }
