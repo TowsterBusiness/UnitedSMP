@@ -13,6 +13,9 @@ domain-expansion - woah a JJK thing. Anyways it gives the player a bounding box 
 - You are blinded so its more mysterious
 - People are flung away so people can't charge in to your 1v1
 
+All items are set using the cutom item tag so, the functions wouldn't change if they were renamed or enchanted ect.
+In addition, the elytra cannot be enchanted since that would make the durability of the item not a disadvantage anymore.
+
 ## What is an SMP?
 In Minecraft, "SMP" stands for Survival Multiplayer Server. 
 It’s a mode or server type where multiple players can join together in a survival world. Players typically gather resources, build structures, and explore the world while interacting with each other.'
@@ -40,21 +43,11 @@ As a prerequisite, you should make sure you have Java installed and up to date o
 12. Java -jar “name of your jar”.jar
 13. Hit enter and after running the command, you will notice a failed to load properties error along with failed to load eula.txt. Do not worry as you will just need to rerun this command once we have configured these files.
 14. Back in the Minecraft Server folder open the “eula.txt’ file that has been created with your text editor. Here you will need to set the eula=false to eula=true and save.
-15. You will also see a “server.properties” file if it does not appear like an editable text file, right-click it and click “Open with” click “More apps” if you are on Windows 10 and scroll down and select your text editor or notepad. (It is suggested to keep the box that says to “Always use this app to open .properties files” if you would like to avoid repeating this step every time you want to edit the properties file and other .properties files).
-16. Here you will be met with many settings so we will be focusing on the core ones to get your server running. Take note of the  query.port setting as this is the port you will need to forward on your local router to allow other inbound connections.
-17. The gamemode setting will allow you set if you would like to play survival or creative. Specify what you would like by typing after the “=”.
-18. Spawn-protection specifies the radius of blocks in the server spawn that cannot be broken. You can change this to 0 if you would like them to be broken.
-19. The allow-nether specifies if you would like the Nether on your server.
-20. Difficulty can set the difficulty of the server. This can be either peaceful, easy, normal, or hard.
-21. The pvp setting specifies if you would like players the ability to hurt each other.
-22. The max-players specifies the maximum amount of people who can join your server. You may want to adjust this to how much RAM you have dedicated to your server.
-23. The level-seed allows you insert a seed for a world to generate from if you have one.
-24. Motd sets the message in the Minecraft server browser that other players will see once they have added your IP to their list.
-25. Now you just have to rerun the launch command in the command prompt and the server should be running! Repeat steps 8-9 to launch the server again. 
+15. Put this compilied mod into the mods folder
+16. Now you just have to rerun the launch command in the command prompt and the server should be running! Repeat steps 8-9 to launch the server again.
+17. To access the items, use /give-united to access them. 
 
 Making sure you are in the Minecraft Server file directory and enter java -jar “your jar name”.jar into command prompts 
-
-For more details on all the settings for the server.properties file you can go here. Make sure to scroll down to the “Java Edition”. 
 
 You will also need to forward the port listed in server.properties query.port. The default it is 25565 so in your router settings you will need to specify that port to forward. This process will vary from different router manufacturers. If you need assistance in forwarding a port, please refer to your router’s help site/manual. 
 
