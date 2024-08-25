@@ -2,8 +2,9 @@
 
 This is a collection of items that are indevelopment for a more fun smp! 
 
-fling - send to twards your enemies
+fling - click to send flying towards your enemies
 wings - more controled wings that regenerage the damage taken and have a limited amount of duablilty
+    You can use these to have a more balanced elytra that people can only use for a short period of time. 
 wind - flings you backwards out of harms way
 domain-expansion - woah a JJK thing. Anyways it gives the player a bounding box that allowes for you and your opponent to have a short 1v1. 
 
@@ -59,4 +60,7 @@ Once you have your public IP, we STRONGLY urge you to not give it out publicly a
 
 When a player wants to connect to your server, they will enter your public IP address followed by :25565 into the IP field of the server menu. The full address should look something like this: 12.34.56.78:25565 
 
-If you are the host, you can either connect to it by typing the public IP or by simply typing ‘localhost’ if your server is running on the computer you play Minecraft with. 
+If you are the host, you can either connect to it by typing the public IP or by simply typing ‘localhost’ if your server is running on the computer you play Minecraft with.
+
+The distribution of your server can be revealing (since you are exposing your ip adress), but by using domains you can be secure while you do it. 
+You can buy domain servers and use those domains to distribute your ip adress, hidden through a domain. This means that your domain is not completely exposed to hackers.
