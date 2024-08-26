@@ -1,5 +1,7 @@
 # United SMP Archives
 
+![USMP](ss.png)
+
 This is a collection of items that are indevelopment for a more fun smp! 
 
 fling - click to send flying towards your enemies
