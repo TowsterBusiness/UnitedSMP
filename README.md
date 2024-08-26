@@ -66,3 +66,17 @@ If you are the host, you can either connect to it by typing the public IP or by 
 
 The distribution of your server can be revealing (since you are exposing your ip adress), but by using domains you can be secure while you do it. 
 You can buy domain servers and use those domains to distribute your ip adress, hidden through a domain. This means that your domain is not completely exposed to hackers.
+
+# Lore
+
+For the readers who want some more definition to the weapons and the cool names for them
+
+Haephaestus’s Hammer  - A hammer that will take the durability taken from another player and on right-click, it will regenerate the durability of the person who they click on. The champion cannot use this on themselves so they’re able to function as a sort of support during battle. Crits take more damage from one player to the other.
+
+Veititus’s Void   - A box that when used, will function as a domain expansion and will trap enemy players within a certain radius. Heavy cooldown
+
+Sheol’s Shawl - This helmet will allow the player to turn completely invisible/invincible to allow them to escape situations or spy on people. However, when invisible, they’re unable to attack anyone. Of course would have a cooldown after taking the helmet off. The cooldown should be the same length as it was used.
+
+Icarus’s Wax Wings - These wings can be used to fly around, basically functioning as elytra, however, they cannot be enchanted with mending or unbreaking and instead will only heal over time when they’re not being used. The structure for discovery can be a sort of cloud with a cabin
+
+Asmi  - Shoots a big laser at someone and instantly kills. But extreme cooldown plus charge up.
