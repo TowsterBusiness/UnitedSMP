@@ -17,9 +17,8 @@ public class onAnvilUse implements Listener {
             if(event.getCurrentItem().getType() == Material.ELYTRA) {
                 String[] words = {
                         "<Icarus> Hey! That's not part of the lore",
-                        "<Icarus> GO FUCK YOURSELF GRAHHH Hits you with the force of 10 million suns",
+                        "<Icarus> GO KYS GRAHHH Hits you with the force of 10 million suns",
                         "<Icarus> You swore an oath under my name, I recognized you as my champion for crying out loud! Don't you go trying to two-time me",
-                        "<Icarus> Uh oh! Bad decision!",
                         "<Icarus> Dawg why you trying to do me dirty?",
                         "<Icarus> Curse of RAHHHHHH",
                 };

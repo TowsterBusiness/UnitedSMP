@@ -37,8 +37,8 @@ public class onClickEntity implements Listener {
             if (event.getPlayer().getItemInHand().getItemMeta().getCustomModelData() == 3001 && !AbilityStatics.usedDomainExpansion) {
                 AbilityStatics.usedDomainExpansion = true;
 
-                world.spawnParticle(Particle.ENCHANTMENT_TABLE, rcLoc, 600, 0.2, 0.5, 0.2);
-                world.spawnParticle(Particle.ENCHANTMENT_TABLE, pLoc, 600, 0.2, 0.5, 0.2);
+                world.spawnParticle(Particle.ENCHANTMENT_TABLE, rcLoc, 600, 0.1, 0.5, 0.2);
+                world.spawnParticle(Particle.ENCHANTMENT_TABLE, pLoc, 600, 0.1, 0.5, 0.2);
 
                 Vector a1 = rcLoc.toVector();
                 Vector a2 = pLoc.toVector();
@@ -110,13 +110,13 @@ public class onClickEntity implements Listener {
                         x++;
                         y = 0;
                     }
-                }, 60L);
+                }, 50L);
 
                 Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(Untitled3.getInstance(), () -> {
                     player.sendMessage("usedDomainExpansion = false");
                     AbilityStatics.usedDomainExpansion = false;
                     AbilityStatics.domExpCheckForPlayerPos = false;
-                }, 60L);
+                }, 50L);
             }
         }
     }

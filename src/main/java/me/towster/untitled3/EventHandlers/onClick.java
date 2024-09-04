@@ -43,8 +43,8 @@ public class onClick implements Listener {
             ParticleDrawer.drawLine(
                     player.getWorld(),
                     Particle.FLAME,
-                    player.getLocation().toVector().add(new Vector(0, 1.5,0)).add(player.getLocation().getDirection().multiply(0.5)),
-                    player.getLocation().toVector().add(new Vector(0, 1.5,0)).add(player.getLocation().getDirection().multiply(30)),
+                    player.getLocation().toVector().add(new Vector(0, 1,0)).add(player.getLocation().getDirection().multiply(0.5)),
+                    player.getLocation().toVector().add(new Vector(0, 1,0)).add(player.getLocation().getDirection().multiply(30)),
                     1);
         }
     }
